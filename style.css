@@ -83,7 +83,17 @@ button.no-btn {
     .btn-group {
         display: flex;
         justify-content: space-between;
-        gap: 10px;
+    }
+    button {
+        width: 48%;
+    }
+}
+
+@media (max-width: 600px) {
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* Increased gap for more visible spacing */
     }
     button {
         width: 48%;
