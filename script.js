@@ -5,7 +5,7 @@ const gif = document.querySelector(".gif");
 
 // Altera o texto e o gif ao clicar no botão Yes
 yesBtn.addEventListener("click", () => {
-  question.innerHTML = "Cuzinho tambem!!";
+  question.innerHTML = "Cuzinho também!!";
   gif.src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGI1cW5wMWhpaDF5b3pjdTF0OHZrcHJvaGkzOHJteDhmd245OGRnZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Vuw9m5wXviFIQ/giphy.gif";
 });
 
@@ -22,7 +22,14 @@ noBtn.addEventListener("click", () => {
   const randomX = Math.floor(Math.random() * maxX);
   const randomY = Math.floor(Math.random() * maxY);
 
-  noBtn.style.position = "absolute"; // Garante que o botão se mova corretamente
+  // Garante que o botão se mova corretamente
+  noBtn.style.position = "absolute"; 
   noBtn.style.left = randomX + "px";
   noBtn.style.top = randomY + "px";
+});
+
+// Adiciona um evento de toque para dispositivos móveis
+noBtn.addEventListener("touchend", (event) => {
+  event.preventDefault(); // Evita o comportamento padrão
+  noBtn.click(); // Simula um clique no botão
 });
