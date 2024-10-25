@@ -59,3 +59,25 @@ button.no-btn {
     left: 50%;
     transform: translateX(-50%);
 }
+
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 0 20px;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    .gif {
+        max-width: 80%;
+    }
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    button {
+        width: 80%;
+        margin: 5px 0;
+    }
+}
